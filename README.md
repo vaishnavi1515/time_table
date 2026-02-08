@@ -1,5 +1,5 @@
-# Ex03 Time Table
-# Date:21/10/2024
+# Ex02 Time Table
+# Date:7/02/2026
 # AIM
 To write a html webpage page to display your slot timetable.
 
@@ -22,132 +22,161 @@ Add your timetable using `<td>` tag.
 ## STEP 6
 Execute the program using runserver command.
 
-# PROGRAM:
-~~~
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Time Table - Vaishnavi V</title>
-    <style>
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        th, td {
-            border: 1px solid black;
-            text-align: center;
-            padding: 10px;
-        }
-        th {
-            background-color: #ffd700; /* Yellow */
-        }
-        td {
-            background-color: #87CEEB; /* Sky blue */
-        }
-        h1, h2 {
-            text-align: center;
-        }
-        .header {
-            display: flex;
-            justify-content: space-between;
-        }
-    </style>
-</head>
-<body>
-    <h2>SLOT TIME TABLE - VAISHNAVI V (24900560)</h2>
+# PROGRAM
 
-    <table>
+timetable.html
+```
+{% load static %}
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>SLOT TIMETABLE</title>
+
+        <link rel="stylesheet" href="{% static 'CSS.css' %}">
+
+        <link rel="icon" href="{% static 'SEC-Logo-1.png'%}">
+
+    </head>
+
+    <body>
+        <center>
+            <img src = "{% static 'SAVEETHA.png' %}" height="100" width="700">
+        </center>    
+        <h2>SLOT TIMETABLE</h2>
+        <h3> vaishnavi v- 25012347</h3>
+        <center>
+        <table>
         <tr>
-            <th>Day/Time</th>
-            <th>Monday</th>
-            <th>Tuesday</th>
-            <th>Wednesday</th>
-            <th>Thursday</th>
-            <th>Friday</th>
-            <th>Saturday</th>
+            <th> DAY/TIME</th>
+            <th> MONDAY</th>
+            <th> TUESDAY</th>
+            <th> WEDNESDAY</th>
+            <th> THURSDAY</th>
+            <th> FRIDAY</th>
+            <th> SATURDAY</th>
         </tr>
         <tr>
             <th>8-10</th>
-            <td>Free slot</td>
-            <td>Chemistry</td>
-            <td>Free slot</td>
-            <td>Machine learning</td>
-            <td>Statistics</td>
-            <td>Statistics</td>
+            <td colspan="3">WEB</td>
+            <td rowspan="2">FREE SLOT</td>
+            <td>FREE SLOT</td>
+            <td>PYTHON</td>
+         </tr>
+         <tr>
+            <th> 10-12</th>
+            <td> ENG</td>
+            <td> PYTHON</td>
+            <td>FREE SLOT</td>
+            <td colspan="2">ENG</td>
         </tr>
         <tr>
-            <th>10-12</th>
-            <td>Career Development</td>
-            <td>Statistics</td>
-            <td>Free slot</td>
-            <td>C programming</td>
-            <td>Web application</td>
-            <td>Web application</td>
+            <th> 12-1</th>
+            <td colspan="6"><b>LUNCH BREAK </b> </td>
         </tr>
         <tr>
-            <th>12-1</th>
-            <td colspan="6">Lunch</td>
-        </tr>
-        <tr>
-            <th>1-3</th>
-            <td>Web application</td>
-            <td>C programming</td>
-            <td>Mentor meet</td>
-            <td>Chemistry</td>
-            <td>Human values</td>
-            <td>Free slot</td>
-        </tr>
-    </table>
-
-    <h2>Subject Codes</h2>
-    <table>
-        <tr>
-            <th>S.No.</th>
-            <th>Subject Code</th>
-            <th>Subject Name</th>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>19EY708</td>
-            <td>Career Development</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>19AI404</td>
-            <td>Web application</td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>19CY205</td>
-            <td>Chemistry</td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>19MA211</td>
-            <td>Statistics</td>
-        </tr>
-        <tr>
-            <td>5</td>
-            <td>19AI304</td>
-            <td>C programming</td>
-        </tr>
-        <tr>
-            <td>6</td>
-            <td>19AI410</td>
-            <td>Machine learning</td>
-        </tr>
-        <tr>
-            <td>7</td>
-            <td>SH7801</td>
-            <td>Human values</td>
-        </tr>
-    </table>
-</body>
+            <th> 1-3</th> 
+            <td> WEB</td>
+            <td> FREE SLOT</td>
+            <td> MENTOR MEET</td>
+            <td> FREE SLOT</td>
+             <td> WEB</td>
+             <td> ENG</td>
+            </tr>
+            <tr>
+                <th>3-5</th>
+                <td> FREE SLOT</td> 
+                <td colspan="3"> PYTHON</td>
+                <td colspan="2">FREE SLOT</td>
+            </tr>
+        </table>
+        <table>
+            <tr background-color:rgb(255, 145, 217);>
+                <th> S.NO</th>
+                <th> SUBJECT CODE</th>
+                <th> SUBJECT NAME</th>
+            </tr>
+            <tr>
+                <th background-color:rgb(237, 190, 221);>1</th>
+                <td> 19AI414</td>
+                <td> Fundamentals of Web Application Development</td>
+            </tr>
+            <tr>
+                <th background-color:rgb(237, 190, 221);>2</th>
+                <td> 19AI301</td>
+                <td>Python Programming</td>
+            </tr>
+            <tr>
+                <th background-color:rgb(237, 190, 221);>3</th>
+                <td>19EN101</td>
+                <td>Communicative English</td>
+            </tr>
+        </table>
+    </center>
+</body> 
 </html>
-~~~
+```
+
+CSS.css
+```
+
+            table{
+                background-color:rgb(127, 180, 244);
+                border:2px solid black;
+                width:50%;
+                text-align:center;
+                border-collapse:collapse;
+                padding:10px;
+            }
+            th{
+                border: 2px solid black;
+                text-align:center;
+                padding:10px;
+                font-family:"Footlight MT Light";
+            }
+            td{
+                text-align:center;
+                padding:10px;
+                border:2px solid black;
+                background-color:rgb(206, 231, 252);
+                font-family: "Palatino Linotype";
+            }
+            h3{
+                text-align:center;
+                font-family: "Lucida Calligraphy";
+            }
+            h2{
+                text-align: center;
+                font-family:"Eras Medium ITC" ;
+            }
+            body {
+                 font-family: "Montserrat Bold";
+                 background-color: rgb(215, 234, 255);
+            }
+```
+views.py
+```
+from django.shortcuts import render
+
+def home(request):
+    return render(request, 'timetable.html')
+```
+urls.py
+```
+from django.contrib import admin
+from django.urls import path
+from slot_app import views
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', views.home)
+    
+]
+```
 # OUTPUT:
 
-![image](https://github.com/user-attachments/assets/ae539acf-f394-458f-9880-2bc269f12784)
+<img width="1907" height="1086" alt="image" src="https://github.com/user-attachments/assets/60f5ab22-094f-4d64-9ff0-29cd669ca115" />
 
 # RESULT
 The program for creating slot timetable using basic HTML tags is executed successfully.
